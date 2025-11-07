@@ -1,5 +1,5 @@
 id: parent_flow
-namespace: company.test
+namespace: demo
 
 tasks:
   - id: subflow
