@@ -1,0 +1,16 @@
+id: simple_write_2
+namespace: demo
+outputs:
+  - id: uri
+    type: STRING
+    value: "{{ outputs.write.uri }}"
+tasks:
+  - id: write
+    type: io.kestra.plugin.core.storage.Write
+    content: "test write"
+  - id: log-write
+    type: io.kestra.plugin.core.log.Log
+    message: "{{ read(outputs.write.uri) }}"
+  - id: pause-2-mins
+    type: io.kestra.plugin.core.flow.Sleep
+    duration: PT2M
