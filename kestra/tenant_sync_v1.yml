@@ -1,0 +1,18 @@
+id: tenant_sync_v1
+namespace: demo
+tasks:
+  - id: sync
+    type: io.kestra.plugin.git.TenantSync
+    sourceOfTruth: GIT
+    whenMissingInSource: DELETE
+    protectedNamespaces:
+      - system
+    url: https://github.com/lxRavenxl/kestra-git
+    username: lxRavenxl
+    password: "{{ envs.GITHUB_API}}"
+    branch: main
+    gitDirectory: kestra
+    kestraUrl: "http://localhost:8080"
+    auth:
+      username: "zeeshan.choudhry@hotmail.com"
+      password: "{{envs.KESTRA_PASSWORD}}"
