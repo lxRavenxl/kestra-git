@@ -1,0 +1,13 @@
+id: simple_write
+namespace: company.test
+outputs:
+  - id: uri
+    type: STRING
+    value: "{{ outputs.write.uri }}"
+tasks:
+  - id: write
+    type: io.kestra.plugin.core.storage.Write
+    content: "test write"
+  - id: log-write
+    type: io.kestra.plugin.core.log.Log
+    message: "{{ read(outputs.write.uri) }}"
