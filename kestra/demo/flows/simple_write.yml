@@ -1,5 +1,5 @@
 id: simple_write
-namespace: company.test
+namespace: demo
 outputs:
   - id: uri
     type: STRING
