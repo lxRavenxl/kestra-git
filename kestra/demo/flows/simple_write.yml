@@ -11,3 +11,6 @@ tasks:
   - id: log-write
     type: io.kestra.plugin.core.log.Log
     message: "{{ read(outputs.write.uri) }}"
+  - id: log-write2
+    type: io.kestra.plugin.core.log.Log
+    message: "{{ read(outputs.write.uri) }}"
