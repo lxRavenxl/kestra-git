@@ -1,0 +1,17 @@
+id: parent_flow
+namespace: company.test
+
+tasks:
+  - id: subflow
+    type: io.kestra.plugin.core.flow.Subflow
+    flowId: simple_write_2
+    namespace: demo
+
+  - id: log-Parent
+    type: io.kestra.plugin.core.log.Log
+    message: "{{ read(outputs.subflow.outputs.uri) }}"
+
+outputs:
+  - id: uri
+    type: STRING
+    value: "{{outputs.subflow.outputs.uri}}"
