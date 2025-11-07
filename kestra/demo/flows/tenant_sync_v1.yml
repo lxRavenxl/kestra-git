@@ -4,15 +4,15 @@ tasks:
   - id: sync
     type: io.kestra.plugin.git.TenantSync
     sourceOfTruth: GIT
-    whenMissingInSource: DELETE
+    whenMissingInSource: KEEP
     protectedNamespaces:
       - system
     url: https://github.com/lxRavenxl/kestra-git
     username: lxRavenxl
-    password: "{{ envs.GITHUB_API}}"
+    password: "{{envs.github_api}}"
     branch: main
     gitDirectory: kestra
     kestraUrl: "http://localhost:8080"
     auth:
       username: "zeeshan.choudhry@hotmail.com"
-      password: "{{envs.KESTRA_PASSWORD}}"
+      password: "{{envs.k_password}}"
