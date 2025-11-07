@@ -1,5 +1,5 @@
 id: alert_on_failure
-namespace: alerting
+namespace: demo
 tasks:
   - id: send_alert
     type: io.kestra.plugin.notifications.mail.MailExecution
