@@ -1,7 +1,7 @@
 id: tenant_sync_v1
 namespace: demo
 tasks:
-  - id: sync
+  - id: sync2
     type: io.kestra.plugin.git.TenantSync
     sourceOfTruth: GIT
     whenMissingInSource: DELETE
