@@ -1,4 +1,4 @@
-id: tenant_sync_v1
+raid: tenant_sync_v1
 namespace: demo
 tasks:
   - id: sync2
@@ -15,4 +15,4 @@ tasks:
     kestraUrl: "http://localhost:8080"
     auth:
       username: "zeeshan.choudhry@hotmail.com"
-      password: "{{envs.k_password}}"
+      password: "KestraAdmin1"
