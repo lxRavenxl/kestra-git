@@ -8,7 +8,7 @@ tasks:
   - id: write
     type: io.kestra.plugin.core.storage.Write
     content: "test write"
-  - id: log-write
+  - id: log-write2
     type: io.kestra.plugin.core.log.Log
     message: "{{ read(outputs.write.uri) }}"
   - id: pause-2-mins
